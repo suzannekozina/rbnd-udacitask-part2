@@ -22,14 +22,14 @@ list.all
 
 # SHOULD CREATE AN UNTITLED LIST AND ADD ITEMS TO IT
 # --------------------------------------------------
-# new_list = UdaciList.new # Should create a list called "Untitled List"
-# new_list.add("todo", "Buy more dog food", due: "in 5 weeks", priority: "medium")
+new_list = UdaciList.new # Should create a list called "Untitled List"
+new_list.add("todo", "Buy more dog food", due: "in 5 weeks", priority: "medium")
 # new_list.add("todo", "Go dancing", due: "in 2 hours")
 # new_list.add("todo", "Buy groceries", priority: "high")
 # new_list.add("event", "Birthday Party", start_date: "May 31")
 # new_list.add("event", "Vacation", start_date: "Dec 20", end_date: "Dec 30")
 # new_list.add("event", "Life happens")
-# new_list.add("link", "https://www.udacity.com/", site_name: "Udacity Homepage")
+new_list.add("link", "https://www.udacity.com/", site_name: "Udacity Homepage")
 # new_list.add("link", "http://ruby-doc.org")
 
 # SHOULD RETURN ERROR MESSAGES
@@ -40,7 +40,7 @@ list.all
 
 # DISPLAY UNTITLED LIST
 # ---------------------
-# new_list.all
+new_list.all
 
 # DEMO FILTER BY ITEM TYPE
 # ------------------------
