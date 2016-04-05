@@ -44,14 +44,15 @@ class UdaciList
     if options[:type]
       table_title += " ** Filter by #{options[:type]} **"
     end
-    table = Terminal::Table.new :title => table_title, :headings => ['#', 'Type', 'Description', "More info", "Priority"], :rows => rows
+    a = Artii::Base.new :font => "standard"
+    table = Terminal::Table.new :title => a.asciify(table_title), :headings => ["#", "Type", "Description", "More info", "Priority"], :rows => rows
     table.align_column(4,:center)
     table.style = {:border_x => "=", :border_i => "x"}
     puts table
   end
     
   def filter(type)
-    header = "Filtered by '#{type}' result:"
+    header = "Filtered by "#{type}" result:"
     puts "-" * header.length
     puts header
     puts "-" * header.length

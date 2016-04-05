@@ -1,6 +1,9 @@
 require 'chronic'
 require 'colorize'
+# Find a third gem of your choice and add it to your project
 require 'terminal-table'
+# Fourth gem of my choice
+require 'artii'
 require 'date'
 require_relative "lib/listable"
 require_relative "lib/errors"
@@ -44,4 +47,19 @@ new_list.all
 
 # DEMO FILTER BY ITEM TYPE
 # ------------------------
-# new_list.filter("event")
+new_list.filter("event")
+
+# DEMO PRINT LISTS TO REPORT
+# ------------------------
+f = File.open("report.txt", "w")
+old_out = $stdout
+$stdout = f
+puts list.all
+puts new_list.all
+puts new_list.filter("event")
+puts new_list.filter("link")
+puts new_list.filter("todo")
+f.close
+
+$stdout = old_out
+puts "goodbye :)"
