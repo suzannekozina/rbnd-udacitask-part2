@@ -46,22 +46,10 @@ class UdaciList
     end
     table = Terminal::Table.new :title => table_title, :headings => ['#', 'Type', 'Description', "More info", "Priority"], :rows => rows
     table.align_column(4,:center)
+    table.style = {:border_x => "=", :border_i => "x"}
     puts table
   end
     
-  #   if @title == nil
-  #   @title = "Untitled List"
-  #   end
-  #   table = Terminal::Table.new do |t|
-  #     t.title = @title
-  #     @items.each_with_index do |item, position|
-  #       t.add_row [position + 1, item]
-  #     end
-  #   end
-  #   table.style = {:border_x => "=", :border_i => "x"}
-  #   puts table
-  # end
-
   def filter(type)
     header = "Filtered by '#{type}' result:"
     puts "-" * header.length
@@ -73,28 +61,10 @@ class UdaciList
   private
 
   def display_header
-    puts "-" * @title.to_s.length
-    puts @title
-    puts "-" * @title.to_s.length
+    now = DateTime.now.strftime("%m/%d/%Y " + "%H:%M")
+    puts "-" * now.length
+    puts now
+    puts "-" * now.length
   end
 end
-  # private
-
-  # def display_header
-  #   puts "-" * @title.to_s.length
-  #   puts @title
-  #   puts "-" * @title.to_s.length
-  # end
-  
-  # def pretty_list
-  #   rows = []
-  #   rows << ["?", "#", "Details"]
-  #   rows << [" ", " ", " "]
-  #   @items.each_with_index do |item, position|
-  #     rows << ["_", position + 1, item.details]
-  #   end
-  #   table = Terminal::Table.new :rows => rows
-  #   table.style = {:border_x => "=", :border_i => "x"}
-  #   puts table
-  # end
-# end
+ 
