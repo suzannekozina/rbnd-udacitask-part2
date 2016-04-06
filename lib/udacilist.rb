@@ -52,10 +52,6 @@ class UdaciList
   end
     
   def filter(type)
-    header = "Filtered by "#{type}" result:"
-    puts "-" * header.length
-    puts header
-    puts "-" * header.length
     all(type: type)
   end
   
