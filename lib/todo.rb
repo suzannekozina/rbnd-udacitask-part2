@@ -10,6 +10,6 @@ class TodoItem
   end
   
   def details
-    [item_type.capitalize, format_description(@description), "due: " + format_date(due: @due), + format_priority(@priority)]
+    [item_type.capitalize, format_description(@description), "due: " + format_date(due: @due), format_priority]
   end
 end
