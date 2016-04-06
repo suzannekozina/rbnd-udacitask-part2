@@ -13,6 +13,6 @@ class LinkItem
   end
   
   def details
-    [item_type.capitalize, format_description(@description), + "site name: " + format_name, ""]
+    [item_type.capitalize, format_description(@description), "site name: " + format_name, ""]
   end
 end
