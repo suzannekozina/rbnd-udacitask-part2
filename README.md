@@ -39,12 +39,3 @@ Additionally, the following requirements have been met:
 * The reflection has been included in the top level directory
 * Code follows proper style and naming conventions
 
-## Submitting Your Project
-
-Before submitting your project for evaluation, we recommend that you check that each of the following is true:
-
-* Your program runs without any errors
-* You are proud of your project and its output
-* You completed your project according to the instructions
-* You checked your project against the [rubric](https://docs.google.com/document/d/1lVcYU23xuNWNUqP8TDvTmJ-6TiVpL5DDKRg1garw5h8/pub)
-* When you feel ready to submit, use the blue 'Submit Project' button below!
